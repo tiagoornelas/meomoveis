@@ -1,0 +1,915 @@
+		/* DEFAULT CODE */
+
+		body {
+			font-family: 'Assistant', sans-serif;}
+
+		header {
+			display: block;
+			height: 12vmax;
+			background-color: #61bba5}
+
+		nav li {
+			display:inline;
+			margin: 0 0 0 3vmax}
+
+		nav ul {
+			display: inline-block;
+			padding: 3.5vmax 0 0 9vmax}
+
+		nav a {
+			display: inline;
+			color: black;
+			font-weight: bold;
+			text-decoration: none;
+			font-size: 1.5vmax;
+			transition: 0.5s color}
+
+		footer {
+			margin-top: 3vmax;
+		}
+
+		footer li {
+			margin: 0 0 0 9vmax}
+
+		footer a {
+			color: black;
+			font-weight: normal;
+			text-decoration: none;
+			font-size: 1.5vmax}
+
+		form input {
+			margin: 0.5vmax 0;
+			padding: 0.5vmax;
+			/* width: 25%; */
+		}
+
+		legend {
+			margin-top: 0.5vmax;
+			font-weight: bold;
+		}
+
+		table {
+			margin: 2vmax;
+		}
+
+		table th {
+			font-weight: bold;
+			font-size: 1.5vmax;
+			padding: 1vmax;
+		}
+
+		table td {
+			padding: 0.4vmax 0.8vmax 0.4vmax 0.8vmax;
+			/* border: 0.01px solid lightgrey; */
+		}
+
+		td i {
+			font-style: italic;
+		}
+
+		td b {
+			font-weight: bold;
+		}
+
+		td a {
+			text-decoration: none;
+			color: black;
+		}
+
+
+			/* IDS */
+
+		#listaNavegacao {
+			vertical-align: top;
+		}
+
+		#inputVenda {
+			width: 17.25vmax;
+		}
+		
+		#input1Venc {
+			width: 17.25vmax;
+		}
+
+		#descricaoVenda {
+			width: 17.25vmax;
+		}
+
+		#tituloRodape1 {
+			margin: 0 0 0 8vmax;
+			font-weight: bold;
+			font-size: 2vmax;}
+
+		#paragrafoRodape1 {
+			margin: 1vmax 0 1vmax 8vmax;
+			font-size: 1.5vmax;}
+
+		#paragrafoRodape3 {
+			margin: 1vmax 0 1vmax 10vmax;
+			font-size: 1.5vmax;}
+
+		#tituloRodape2 {
+			margin: 0 0 1vmax 9vmax;
+			font-weight: bold;
+			font-size: 2vmax;}
+
+		#tituloRodape3 {
+			margin: 0 0 1vmax 10vmax;
+			font-weight: bold;
+			font-size: 2vmax;}
+
+		#primeiraColunaRodape {
+			display:inline-block;
+			vertical-align: top;}
+
+		#segundaColunaRodape {
+			display:inline-block;
+			vertical-align: top;
+			margin: 0 0 4vmax 0;}
+
+		#terceiraColunaRodape {
+			display:inline-block;
+			vertical-align: top;
+			margin: 0 0 8vmax 0;}
+
+		#banner {
+			display:block;
+			height: 20vmax;
+			margin: 4vmax 0 4vmax 0;}
+
+		#chave {
+			display:inline;
+			margin: 8vmax 0 4vmax 15vmax;
+			width: 6%;}
+
+		#pixelart_sfg {
+			display:inline;
+			margin: 0 15vmax 0 0;
+			width: 30%;}
+
+		#subtituloBanner {
+			display:inline-block;
+			font-weight:bold;
+			font-size: 3vmax;
+			margin: 0 0 0 2.5vmax;}
+
+		#tituloCategoria {
+			font-weight: bold;
+			text-align: center;
+			font-size: 2.5vmax;}
+
+		#listaCategorias {
+			margin: 4vmax 0 0 14vmax;}
+
+		#banner_de_cima {
+			margin-top: 0}
+
+		#tag {
+			text-align:center;
+			font-size: 1.5vmax;
+			background: black;
+			color: white;
+			border: 0.75vmax solid black}
+
+		#logotipo {
+			display : inline;
+			height: 4vmax;
+			margin: 2.5vmax 0 2vmax 6vmax;}
+
+		#menuNavegacao {
+			width: 100%;
+		}
+
+		#informacoesDoCliente {
+			box-sizing: border-box;
+			background-color: lightgrey;
+			display: inline-block;
+			float: left;
+			width: 25%;
+			padding: 2vmax;
+			margin: 2vmax;
+		}
+
+		#barraLateral {
+			padding-top: 3vmax;
+			padding-bottom: 100%;
+			box-sizing: border-box;
+			background-color: black;
+			display: inline;
+			float: left;
+			width: 15%;
+		}
+
+		#botaoConsulta {
+			display: inline-block;
+			margin-top: 5vmax;
+			height: 2vmax;
+		}
+
+		#botaoCadastro {
+			display: inline;
+
+			height: 2vmax;
+			cursor: pointer;
+		}
+
+		#searchboxConsultas {
+			display: inline-block;
+		}
+
+		#dashConsultaCliente {
+			margin: 1vmax 1vmax 1vmax 15vmax;
+		}
+
+		#searchIcons {
+			margin-left: 14vmax;
+			margin-top: -5.2vmax;
+		}
+
+		#botaoCancelarDeletar {
+			position: relative;
+			top: -3vmax;
+			right: -6vmax;
+		}
+
+		#botaoDeletar {
+			position: relative;
+			right: 6vmax;
+		}
+
+		#visualizarCompra {
+			margin: 2vmax 2vmax 2vmax 18vmax;
+		}
+
+		#grafico {
+			width: 80%;
+			height: 60%;
+			display: inline-block;
+		}
+
+		#dashboard {
+			display: inline-block;
+			position: absolute;
+			top: 10vmax;
+			right: -30vmax;
+		}
+
+		#tabelaVendasDash {
+			display: inline-block;
+			position: relative;
+			width: 20vmax;
+			top: -4vmax;
+			right: 0vmax;
+		}
+
+		#VendasDash {
+			display: inline-block;
+			position: absolute;
+			height: 14vmax;
+			width: 20vmax;
+			top: 12vmax;
+			right: 20vmax;
+		}
+
+		#tabelaLogisticaDash {
+			display: inline-block;
+			position: absolute;
+			width: 20vmax;
+			top: 17vmax;
+			right: -3.5vmax;
+		}
+
+		#tituloLogistica {
+			position: absolute;
+			width: 20vmax;
+			top: 14.5vmax;
+			right: -2.5vmax;
+		}
+
+		#articleDash1 {
+			display: inline-block;
+			position: absolute;
+			top: 38vmax;
+			left: 18vmax;
+		}
+
+		#articleDash2 {
+			display: inline-block;
+			position: absolute;
+			top: 38vmax;
+			left: 40vmax;
+		}
+
+		#articleDash3 {
+			display: inline-block;
+			position: absolute;
+			top: 38vmax;
+			left: 62vmax;
+		}
+
+		#articleDash4 {
+			display: inline-block;
+			position: absolute;
+			top: 46vmax;
+			left: 84vmax;
+		}
+
+	#tabelaBotaoDash {
+		position: relative;
+		top: -2vmax;
+	}
+
+	#whatsappVisualizarCliente {
+		position: relative;
+		top: 0.3vmax;
+		left: 0.25vmax;
+		height: 2vmax;
+	}
+
+	#logotipo:hover {
+			transform: scale(1.05);
+			transition: 1s transform;}
+
+	#tituloVendaExpressa {
+		position: relative;
+		top: -1vmax;
+		left: -1vmax;
+	}
+
+	#avisoVendaExpressa {
+		position: relative;
+		top:-5vmax;
+		left: -2vmax;
+	}
+
+	#precoFrete {
+		position: relative;
+		left:0.675vmax;
+	}
+
+	#precoEntrada {
+		width: 12.9vmax;
+	}
+
+	#tabelaProdutosVenda {
+		display: inline;
+	}
+
+	#addRow2 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow3 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow4 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow5 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow6 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow7 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow8 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow9 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#addRow10 {
+		font-size:1.5vmax;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#rowProduto2 {
+		display: none;
+	}
+
+	#rowProduto3 {
+		display: none;
+	}
+
+	#rowProduto4 {
+		display: none;
+	}
+
+	#rowProduto5 {
+		display: none;
+	}
+
+	#rowProduto6 {
+		display: none;
+	}
+
+	#rowProduto7 {
+		display: none;
+	}
+
+	#rowProduto8 {
+		display: none;
+	}
+
+	#rowProduto9 {
+		display: none;
+	}
+
+	#rowProduto10 {
+		display: none;
+	}
+	
+	#print {
+	  display:block;
+	  box-sizing: 50%;
+      width: 40%;
+      border: 2px solid black;
+      padding: 50px;
+      margin: 20px;
+	}
+	#printLogo {
+	    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
+	}
+
+			/* CLASSES */
+
+			.miniDropDown {
+				padding: 0.4vmax 0.25vmax 0.25vmax 0.25vmax;
+			}
+
+			.DropDown {
+				margin: 0.5vmax 0;
+				padding: 0.5vmax;
+				width: 13.75vmax;
+			}
+
+			.DashCaixa {
+				display: inline-block;
+			}
+
+		.titulo {
+			display: inline-block;
+			width: 30%;
+		}
+		.tituloBanner {
+			display:inline-block;
+			font-weight:normal;
+			font-size: 2vmax;
+			margin: 3vmax 0 0 2.5vmax;}
+
+		.margemDeLista {
+			margin-left: 10vmax;}
+
+		.negrito {
+			font-weight: bold;
+		}
+
+		.hideLinkVisualizarCompra {
+			font-weight: bold;
+			text-decoration: none;
+			color: black;
+		}
+
+		.fornecedor {
+			width: 10%;
+			margin: 2vmax 5vmax 2vmax 5vmax}
+
+		.categorias {
+			display: inline-block;
+			width: 15%;
+			margin: 2vmax 5vmax 2vmax 5vmax}
+
+		.dashboardCard {
+			padding: 1vmax;
+			margin: 0 2vmax;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.dashboardData {
+			font-size: 1.7vmax;
+			font-style: italic;
+		}
+
+		.pagamento {
+			width: 5%;
+			margin: 2vmax 1vmax 2vmax 1vmax}
+
+		.inline {
+			display: inline}
+
+		.botao {
+			width: 8vmax;
+			height: 2vmax;
+			margin: 1vmax 1vmax 0 0;
+			background-color: #61bba5;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.botao2 {
+			width: 12vmax;
+			height: 2vmax;
+			margin: 1vmax 1vmax 0 0;
+			background-color: #61bba5;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.botao2Select {
+			width: 12vmax;
+			height: 2vmax;
+			margin: 1vmax 1vmax 0 0;
+			background-color: #BAB557;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.botao3 {
+			width: 7vmax;
+			height: 2vmax;
+			margin: 1vmax 1vmax 0 0;
+			background-color: #61bba5;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.caixaDeBotao {
+			margin: 1vmax;
+			display: inline-block;
+		}
+
+		.caixaDeBotao2 {
+			margin: 1vmax;
+			display: inline-block;
+			width: 40%;
+		}
+
+		.botaoSair {
+			width: 8vmax;
+			height: 2vmax;
+			margin: 1vmax 1vmax 0 0;
+			background-color: #BB6177;
+			border: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.botaoBarraLateral {
+			margin-top: 0.25vmax;
+			width: 100%;
+			height: 2vmax;
+			background-color: black;
+			border: none;
+			cursor: pointer;
+		}
+
+		.form {
+			width: 100%;
+			margin: 0.5vmax 0 0 3vmax;
+		}
+
+		.hideLink {
+			text-decoration:none;
+			color:white;
+		}
+
+		.hideLinkBarraLateral {
+			text-decoration:none;
+			color:white;
+			font-size: 1.5vmax;
+		}
+
+
+		.hideLinkSymbol {
+			text-decoration:none;
+			color: black;
+			font-size: 1.5vmax;
+			margin: 0.01vmax;
+		}
+
+		.aviso {
+			margin: 1vmax 0 0 3vmax;
+			color: red;
+			font-style: italic;
+		}
+		
+		.aviso2 {
+		    margin-top: 2vmax;
+			font-style: italic;
+			font-size: 1vmax;
+		}
+
+		.centralizar {
+			text-align: center;
+		}
+
+		.titulosSismeo {
+			font-size: 1.5vmax;
+			font-weight: bold;
+			margin: 2vmax 0 0 2.5vmax;
+		}
+
+		.titulosAdcProduto {
+			font-size: 1.5vmax;
+			font-weight: bold;
+			margin-top: 1vmax;
+		}
+
+		.titulosDash {
+			text-decoration: none;
+			font-size: 2.5vmax;
+			font-weight: bolder;
+			color: #61bba5;
+			margin: 2vmax 0 0 2.5vmax;
+		}
+
+		.titulosDashHideLink {
+			text-decoration: none;
+			font-size: 2.5vmax;
+			font-weight: bolder;
+			color: #61bba5;
+		}
+
+		.titulosBarraLateral {
+			font-size: 1.5vmax;
+			font-weight: bold;
+			color: #61bba5;
+			margin-top: 2vmax;
+		}
+
+		.blocoSismeo {
+			display: block;
+			margin: 1vmax 2.5vmax 1vmax 1vmax;
+		}
+
+		.legendaConsultas {
+				display:inline-block;
+				font-weight: normal;
+				font-style: italic;
+				margin: -1.5vmax 0 1vmax 2.5vmax;
+		}
+
+		.italic {
+			font-style: italic;
+		}
+
+		.vermelho {
+			font-weight: bold;
+			color: #BB6177;
+		}
+
+		.amarelo {
+			font-weight: bold;
+			color: #D4B044;
+		}
+
+		.verde {
+			font-weight: bold;
+			color: #61BBA5;
+		}
+
+		.popup {
+			background: rgba(0, 0, 0, 0.4);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.popupFixo {
+			background: rgba(0, 0, 0, 0.4);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.popupFixoPosition {
+			background: rgba(0, 0, 0, 0.1);
+			width: 100%;
+			height: 300%;
+			position: absolute;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.popupContent {
+			height: 75%;
+			width: 70%;
+			background: white;
+			margin-top: 2vmax;
+			padding: 2vmax;
+			border-radius: 5px;
+			position: relative;
+			text-align: center;
+		}
+
+		.medPopupContent {
+			height: 25vmax;
+			width: 45vmax;
+			background: white;
+			margin: 2vmax;
+			padding: 2vmax;
+			border-radius: 5px;
+			position: relative;
+			text-align: center;
+		}
+
+		.miniPopupContent {
+			height: 15vmax;
+			width: 35vmax;
+			background: white;
+			margin: 2vmax;
+			padding: 2vmax;
+			border-radius: 5px;
+			position: relative;
+			text-align: center;
+		}
+
+		.vendaExpressaPopupContent {
+			height: 25vmax;
+			width: 42vmax;
+			background: white;
+			margin: 2vmax;
+			padding: 0.5vmax;
+			border-radius: 5px;
+			position: absolute;
+			left: 14vmax;
+			top: 11vmax;
+			text-align: center;
+		}
+
+		.popupInput {
+			width: 40%;
+		}
+
+		.tituloPopup {
+				font-size: 2vmax;
+				font-weight: bold;
+			}
+
+		.close {
+			height: 1.5vmax;
+			position: absolute;
+			top: 1vmax;
+			right: 1vmax;
+			cursor: pointer;
+		}
+
+		.botaoImgTabela {
+			height: 1.5vmax;
+		}
+
+		#botaoVenda {
+			position: relative;
+			top: -0.5vmax;
+			right: -4vmax;
+		}
+
+			/* HOVERS */
+
+		footer li a:hover {
+			color: #61bba5;
+			transition: 0.5s color}
+
+		nav a:hover {
+			color: white;
+			transition: 0.5s color}
+
+		.botao:hover {
+			transform: scale(1.05);
+			transition: 1s transform;}
+
+		.botao2:hover {
+			transform: scale(1.05);
+			transition: 1s transform;}
+
+		.botao2Select:hover {
+			transform: scale(1.05);
+			transition: 1s transform;}
+
+			.botao3:hover {
+				transform: scale(1.05);
+				transition: 1s transform;}
+
+		.botaoSair:hover {
+			transform: scale(1.05);
+			transition: 1s transform;}
+
+		.botaoBarraLateral:hover {
+			transform: scale(1.05);
+			transition: 1s all;}
+
+		.categorias:hover {
+			transition: 1s transform;
+			transform: scale(1.1)}
+
+		.fornecedor:hover {
+			transition: 1s transform;
+			transform: scale(1.1)}
+
+			/* MOBILE */
+
+		@media screen and (max-width: 480px) {
+			.fornecedor {
+				width: 20%;
+				margin: 1vmax 1vmax;
+			}
+
+			#listaFornecedores {
+				margin: 0 ;
+			}
+
+			header {
+				height: 9vmax;
+			}
+
+			#logotipo {
+				display: block;
+				margin: 1vmax auto;
+			}
+
+			#listaFornecedores , #listaNavegacao , #tituloRodape2 ,
+				#segundaColunaRodape, #metodosDePagamento {
+				display: none;
+			}
+
+			#banner {
+				margin: 0;
+			}
+			#chave {
+				margin-left: 6vmax;
+			}
+
+			#pixelart_sfg {
+				margin-top: 5vmax;
+				margin-right: 5vmax;
+			}
+
+			.tituloBanner {
+				font-size: 1.5vmax
+			}
+
+			#subtituloBanner {
+				font-size: 2vmax;
+			}
+
+			#listaCategorias {
+				margin: 2vmax 0 0 4vmax;
+			}
+
+			.categorias {
+				width: 20%;
+				margin: 2vmax;
+			}
+
+			 #tituloRodape3 , #paragrafoRodape3 {
+				margin-left: 8vmax;
+			}
+
+			#metodosDePagamentos {
+				margin-left: 0;
+			}
+		}
