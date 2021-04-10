@@ -21,6 +21,26 @@
 		<div id="banner_de_cima">
 			<img width=100% src="img/banner_de_cima.jpg">
 		</div>
+		<div id="listaFornecedores">
+				<ul class="margemDeLista">
+					<li class="inline"><img class="fornecedor"
+								src="img/lopas.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/valdemoveis.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/bianchi.png"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/salleto.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/kaiki.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/benetil.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/carioca.jpg"></li>
+					<li class="inline"><img class="fornecedor"
+								src="img/tcil.png"></li>
+				</ul>
+			</div>
 	 							<!-- 3 - BANNER PRINCIPAL -->
 								<!-- 3.1 - Ícone de Chave no Banner Principal -->
 		<div id="imageLandingPage">
@@ -57,26 +77,6 @@
 			<button id="buttonLanding"><a class="HideLink" target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20seus%20produtos!">
 				CONHECER NOSSOS PRODUTOS</a></button>
 		</div>
-			<div id="listaFornecedores">
-				<ul class="margemDeLista">
-					<li class="inline"><img class="fornecedor"
-								src="img/lopas.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/valdemoveis.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/bianchi.png"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/salleto.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/kaiki.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/benetil.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/carioca.jpg"></li>
-					<li class="inline"><img class="fornecedor"
-								src="img/tcil.png"></li>
-				</ul>
-			</div>
 	</main>
 		<!-- RODAPÉ -->
 		<?php include('elements/rodape.php') ?>
