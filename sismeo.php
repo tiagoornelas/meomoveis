@@ -141,7 +141,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 										}
 										print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ " . number_format($vendasMes, 2, ',', '.') . "</td></tr>";
 										if ($vendasMes > 0) {
-										print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
+										print "<tr><td><b class='negrito'>Vendas do SSite</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
 										} else {
 											print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ 0,00 (0%)</td></tr>";
 										}
