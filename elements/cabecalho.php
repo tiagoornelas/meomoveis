@@ -19,7 +19,7 @@
     <nav id="menuNavegacao">
       <a href='index.php'><img id="logotipo" src="/img/logo_branco.png"></a>
       <ul id="listaNavegacao"> 			<!-- 1.3 - Menu de Navegação -->
-        <li><a href="/index.php">início123</a></li>
+        <li><a href="/index.php">início</a></li>
         <li><a href="/marcas.php">marcas</a></li>
         <li><a href="/categorias.php">categorias</a></li>
         <li><a href="/entregas.php">entregas</a></li>
