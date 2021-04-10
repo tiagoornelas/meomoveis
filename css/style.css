@@ -14,7 +14,8 @@
 
 		nav ul {
 			display: inline-block;
-			padding: 3.5vmax 0 0 9vmax}
+			padding: 3.75vmax 0 0 9vmax;
+			margin: 0 0 0 2vmax;}
 
 		nav a {
 			display: inline;
@@ -79,6 +80,31 @@
 
 			/* IDS */
 
+		#landingPage {
+			margin: 4vmax;
+			width: 40%;
+			display: inline-block;
+			margin-top: 2vmax;
+		} 
+
+		#imageLandingPage {
+			position: relative;
+			top: 4vmax;
+			margin: 4vmax;
+			width: 40%;
+			display: inline-block;
+			margin-top: 2vmax;
+		} 
+		
+		#imageLandingPage2 {
+			position: relative;
+			top: 4vmax;
+			margin: 4vmax;
+			width: 40%;
+			display: inline-block;
+			margin-top: 2vmax;
+		} 
+	
 		#listaNavegacao {
 			vertical-align: top;
 		}
@@ -154,9 +180,36 @@
 			margin: 0 0 0 2.5vmax;}
 
 		#tituloCategoria {
+			padding: 1vmax;
 			font-weight: bold;
-			text-align: center;
+			text-align: left;
 			font-size: 2.5vmax;}
+
+		#subtituloCategoria {
+			padding: 1vmax;
+			font-weight: bold;
+			text-align: left;
+			font-size: 2vmax;}
+
+		#textoCategoria {
+			padding: 1vmax;
+			text-align: left;
+			font-size: 1.5vmax;}
+
+		#buttonLanding {
+			position: relative;
+			right: -9vmax;
+			width: 18vmax;
+			height: 4vmax;
+			margin: 1vmax 3vmax 1vmax auto;
+			align-items: center;
+			font-weight: bold;
+			background-color: #61bba5;
+			border: none;
+			color: white;
+			cursor: pointer;
+			border-radius: 3px;
+		}
 
 		#listaCategorias {
 			margin: 4vmax 0 0 14vmax;}
@@ -208,7 +261,6 @@
 
 		#botaoCadastro {
 			display: inline;
-
 			height: 2vmax;
 			cursor: pointer;
 		}
@@ -408,6 +460,10 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
+	
+	#rodape {
+		margin-top: 14vmax;
+	}
 
 	#rowProduto2 {
 		display: none;
@@ -460,21 +516,27 @@
       width: 25%;
 	}
 
+	#banner2 {
+		margin: 4vmax 0;
+		position: relative;
+		left: 15vmax;
+	}
+
 			/* CLASSES */
 
-			.miniDropDown {
-				padding: 0.4vmax 0.25vmax 0.25vmax 0.25vmax;
-			}
+		.miniDropDown {
+			padding: 0.4vmax 0.25vmax 0.25vmax 0.25vmax;
+		}
 
-			.DropDown {
-				margin: 0.5vmax 0;
-				padding: 0.5vmax;
-				width: 13.75vmax;
-			}
+		.DropDown {
+			margin: 0.5vmax 0;
+			padding: 0.5vmax;
+			width: 13.75vmax;
+		}
 
-			.DashCaixa {
-				display: inline-block;
-			}
+		.DashCaixa {
+			display: inline-block;
+		}
 
 		.titulo {
 			display: inline-block;
@@ -859,12 +921,64 @@
 			}
 
 			#listaFornecedores {
-				margin: 0 ;
+				margin: 4vmax;
 			}
 
 			header {
 				height: 9vmax;
 			}
+
+			#imageLandingPage {
+				display: none;
+			}
+
+			#imageLandingPage2 {
+				position: relative;
+				top: 2vmax;
+				margin: 4vmax;
+				width: 80%;
+				display: inline-block;
+				margin-top: 2vmax;
+			} 
+
+			#tituloCategoria {
+				padding: 1vmax;
+				font-weight: bold;
+				text-align: center;
+				font-size: 2.5vmax;}
+	
+			#subtituloCategoria {
+				padding: 1vmax;
+				font-weight: bold;
+				text-align: center;
+				font-size: 2vmax;}
+	
+			#textoCategoria {
+				padding: 1vmax;
+				text-align: center;
+				font-size: 1.5vmax;}
+	
+			#buttonLanding {
+				position: relative;
+				right: -10vmax;
+				font-size: 1.25vmax;
+				width: 18vmax;
+				height: 4vmax;
+				margin: 1vmax 3vmax 1vmax auto;
+				align-items: center;
+				font-weight: bold;
+				background-color: #61bba5;
+				border: none;
+				color: white;
+				cursor: pointer;
+				border-radius: 3px;
+			}
+
+			#landingPage {
+				width: 80%;
+				display: block;
+				margin-top: 2vmax;
+			} 
 
 			#logotipo {
 				display: block;
@@ -879,6 +993,11 @@
 			#banner {
 				margin: 0;
 			}
+
+			#banner2 {
+				display: none;
+			}
+
 			#chave {
 				margin-left: 6vmax;
 			}
