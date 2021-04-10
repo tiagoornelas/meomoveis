@@ -204,7 +204,7 @@
 			margin: 1vmax 3vmax 1vmax auto;
 			align-items: center;
 			font-weight: bold;
-			background-color: #61bba5;
+			background-image: linear-gradient(to right, #62CED1, #5DC771);
 			border: none;
 			color: white;
 			cursor: pointer;
@@ -959,15 +959,19 @@
 				font-size: 1.5vmax;}
 	
 			#buttonLanding {
-				position: relative;
-				right: -10vmax;
-				font-size: 1.25vmax;
-				width: 18vmax;
-				height: 4vmax;
-				margin: 1vmax 3vmax 1vmax auto;
+				margin: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				font-size: 1.75vmax;
+				width: 22vmax;
+				height: 6vmax;
+				margin: 1vmax 0;
 				align-items: center;
 				font-weight: bold;
-				background-color: #61bba5;
+				background-image: linear-gradient(to right, #62CED1, #5DC771);
 				border: none;
 				color: white;
 				cursor: pointer;
