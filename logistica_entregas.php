@@ -19,7 +19,7 @@
 				$termo_da_pesquisa = $_GET['search'];
 				$conteudo_pesquisa = "SELECT vendas.ID, vendas.compraID, vendas.dataVenda, vendas.loja, vendas.cliente,
 															vendas.clienteCPF, vendas.descricaoGeral, vendas.fornecedor, vendas.produto,
-															clientes.telefone, clientes.ENDERECO
+															clientes.telefone, clientes.ENDERECO, clientes.REFERENCIA, DateDiff(vendas.dataVenda, CURRENT_DATE()) as 'Atraso'
 														FROM vendas
 														RIGHT JOIN clientes
 														ON vendas.clienteCPF = clientes.CPF
@@ -30,7 +30,7 @@
 				$pesquisa_realizada = false;
 				$conteudo_pesquisa = "SELECT vendas.ID, vendas.compraID, vendas.dataVenda, vendas.loja, vendas.cliente,
 															vendas.clienteCPF, vendas.descricaoGeral, vendas.fornecedor, vendas.produto,
-															clientes.telefone, clientes.ENDERECO, clientes.REFERENCIA
+															clientes.telefone, clientes.ENDERECO, clientes.REFERENCIA, DateDiff(vendas.dataVenda, CURRENT_DATE()) as 'Atraso'
 														FROM vendas
 														RIGHT JOIN clientes
 														ON vendas.clienteCPF = clientes.CPF
@@ -102,6 +102,7 @@
 								<th style="width:15%">Produto</th>
 								<th style="width:20%">Endereço</th>
 								<th style="width:20%">Referência</th>
+								<th style="width:5%"></th>
 								<th style="width:10%"></th>
 							</tr>
 								<?php
@@ -117,12 +118,14 @@
 										 $whatsapp = $exibirResultados[9];
 										 $endereco = $exibirResultados[10];
 										 $ref = $exibirResultados[11];
+										 $atraso = (-1 * $exibirResultados[12]);
 
 										 print "<td><a href='visualizar_cliente.php?cpf=$cpf'><b>$cliente</b></a></td>";
 										 print "<td>$fornecedor</td>";
 										 print "<td>$produto</td>";
 										 print "<td>$endereco</td>";
 										 print "<td>$ref</td>";
+										 print "<td class='vermelho'>$atraso</td>";
 
 										 if ($whatsapp > 0) {
 											 print "<td><a href='realizar_entregas.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>

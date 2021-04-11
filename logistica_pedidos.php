@@ -19,7 +19,7 @@
 				$termo_da_pesquisa = $_GET['search'];
 				$conteudo_pesquisa = "SELECT vendas.ID, vendas.compraID, vendas.dataVenda, vendas.loja, vendas.cliente,
 																vendas.clienteCPF, vendas.descricaoGeral, vendas.fornecedor, vendas.produto,
-																fornecedores.celular_do_vendedor
+																fornecedores.celular_do_vendedor, DateDiff(vendas.dataVenda, CURRENT_DATE()) as 'Atraso'
 															FROM vendas
 															RIGHT JOIN fornecedores
 															ON vendas.fornecedor = fornecedores.empresa
@@ -30,7 +30,7 @@
 				$pesquisa_realizada = false;
 				$conteudo_pesquisa = "SELECT vendas.ID, vendas.compraID, vendas.dataVenda, vendas.loja, vendas.cliente,
 																vendas.clienteCPF, vendas.descricaoGeral, vendas.fornecedor, vendas.produto,
-																fornecedores.celular_do_vendedor
+																fornecedores.celular_do_vendedor, DateDiff(vendas.dataVenda, CURRENT_DATE()) as 'Atraso'
 															FROM vendas
 															RIGHT JOIN fornecedores
 															ON vendas.fornecedor = fornecedores.empresa
@@ -97,12 +97,11 @@
 							</section>
 						<table>
 							<tr>
-								<th style="width:10%">ID Compra</th>
 								<th style="width:10%">Venda</th>
-								<th style="width:10%">Loja</th>
-								<th style="width:20%">Cliente</th>
+								<th style="width:30%">Cliente</th>
 								<th style="width:10%">Fornecedor</th>
-								<th style="width:30%">Produto</th>
+								<th style="width:25%">Produto</th>
+								<th style="width:5%"></th>
 								<th style="width:10%"></th>
 							</tr>
 								<?php
@@ -116,13 +115,13 @@
 										 $produto = $exibirResultados[8];
 										 $cpf = $exibirResultados[5];
 										 $whatsapp = $exibirResultados[9];
+										 $atraso = (-1* $exibirResultados[10]);
 
-										 print "<td>$compraID</td>";
 										 print "<td><b>$venda</b></td>";
-										 print "<td><i>$loja</i></td>";
 										 print "<td><a href='visualizar_cliente.php?cpf=$cpf'><b>$cliente</b></a></td>";
 										 print "<td>$fornecedor</td>";
 										 print "<td>$produto</td>";
+										 print "<td class='vermelho'>$atraso</td>";
 
 										 if ($whatsapp > 0) {
 											 print "<td><a href='realizar_pedidos.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
