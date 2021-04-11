@@ -97,10 +97,9 @@
 							</section>
 						<table>
 							<tr>
-								<th style="width:10%">Venda</th>
-								<th style="width:30%">Cliente</th>
+								<th style="width:35%">Cliente</th>
 								<th style="width:10%">Fornecedor</th>
-								<th style="width:25%">Produto</th>
+								<th style="width:40%">Produto</th>
 								<th style="width:5%"></th>
 								<th style="width:10%"></th>
 							</tr>
@@ -117,7 +116,6 @@
 										 $whatsapp = $exibirResultados[9];
 										 $atraso = (-1* $exibirResultados[10]);
 
-										 print "<td><b>$venda</b></td>";
 										 print "<td><a href='visualizar_cliente.php?cpf=$cpf'><b>$cliente</b></a></td>";
 										 print "<td>$fornecedor</td>";
 										 print "<td>$produto</td>";
