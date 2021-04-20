@@ -56,7 +56,7 @@
 								type="text" placeholder="Dê um nome de ref. para a compra." maxlength="50" pattern="[A-Z\s]+" required><br>
 					<label for="dataVenda">Data Real da Venda:</label>
 					<input id="inputVenda" name="dataVenda" class="input"
-								type="date" required onblur='input1Venc.value = this.value'><br>
+								type="date" required><br>
 					<label for="precoFrete">Frete:</label>
 					<input id="precoFrete" class="input" name="precoFrete"
 									type="number" step="0.01" value="0.00" required><br><br>

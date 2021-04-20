@@ -165,7 +165,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 	</div>
 
  		 <main>
-			  <iframe id="grafico" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=973862488&amp;format=interactive"></iframe>
+		  <iframe id="grafico" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=1776382643&amp;format=interactive"></iframe>
 					<div id="VendasDash" class="titulo">
 							<table id="tabelaVendasDash" style='width: 25vmax;'>
 								<h1 class="titulosDash"><a class="titulosDashHideLink" href='consulta_vendas.php'>Vendas</a>
@@ -174,10 +174,10 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								<th style='width: 30%'></th>
 								<?php
 								    $porcentagemSite = intval(($vendasMesSite/$vendasMes)*100);
-										print "<tr><td><b class='negrito'>Recebíveis do Dia</b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
+										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Recebíveis do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
 										print "<tr><td><b class='negrito'>Recebíveis do Mês</b></td><td>R$ " . number_format($aReceberEsteMes, 2, ',', '.') . "</td></tr>";
-										if ($aReceberEsteMes > 0) {
-										print "<tr><td><b class='negrito'>Entradas do Mês</b></td><td>R$ " . number_format($aReceberEsteMes, 2, ',', '.') . "</td></tr>";
+										if ($recebidosEsteMes > 0) {
+										print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ " . number_format($recebidosEsteMes, 2, ',', '.') . "</td></tr>";
 										} else {
 											print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ 0,00 (0%)</td></tr>";
 										}
@@ -213,7 +213,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 										 <button class="botao" style="background:#F2940C"><a href="cobranca.php?late=5" class="hideLink">Atrasados 5d</a></button>
 										 <button class="botao" style="background:#DB6300"><a href="cobranca.php?late=30" class="hideLink">Atrasados 30d</a></button><br>
 										 <button class="botao" style="background:#F2520C"><a href="cobranca.php?late=90" class="hideLink">Atrasados 90d</a></button>
-										 <button class="botao" style="background:#E82F0C"><a href="cobranca.php?" class="hideLink">Atrasados 90d+</a></button>
+										 <button class="botao" style="background:#E82F0C"><a href="cobranca.php?" class="hideLink">Atrasados Geral</a></button>
 									 </div>
 								 </article>
 				</div>
@@ -234,6 +234,14 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 										 <button class="botao" style="background:#8C43BD"><a href="https://docs.google.com/spreadsheets/d/1pC5eURGA5ZLeKROah4Hz0gLF9IJ6yiac9i5LK427Tt8/edit?usp=drive_web&ouid=110296138011875641975" target='_blank' class="hideLink">Operação Ubá</a></button><br>
 										 <button class="botao" style="background:#703FD4"><a href="https://docs.google.com/spreadsheets/d/1czy_uO3vPrhsHY_uPF4eYDqHhW1YzEnf3nJgiiq8ULI/edit?usp=drive_web&ouid=110296138011875641975" target='_blank' class="hideLink">Planilha Meo</a></button>
 										 <button class="botao" style="background:#443CC9"><a href="https://www.bibliaon.com/versiculo_do_dia/" target='_blank' class="hideLink">Versículo do Dia</a></button>
+									 </div>
+								 </article>
+
+								 <article id="articleDash4" class='DashCaixa'>
+										<div id="tabelaBotaoDash">
+											<h1><b class='negrito'>Versão</b></h1>
+										 <h2>Sismeo v0.3 Beta</h2>
+										 <h2>Tiago Martins Ornelas</h2>
 									 </div>
 								 </article>
 		  </main>

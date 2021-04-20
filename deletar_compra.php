@@ -128,26 +128,26 @@
 
 						 						 print "<td>$produto</td>";
 						 						 print "<td>$fornecedor</td>";
-												 if ($pedido > 0) {
-													 print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
-												 } else {
-													 print "<td><img class='botaoImgTabela' src='img/check2.png'></td>";
-												 }
-												 if ($retira > 0) {
-													 print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
-												 } else {
-													 print "<td><img class='botaoImgTabela' src='img/check2.png'></td>";
-												 }
-												 if ($entrega > 0) {
-													 print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
-												 } else {
-													 print "<td><img class='botaoImgTabela' src='img/check2.png'></td>";
-												 }
-												 if ($assistencia > 0) {
-													 print "<td><img class='botaoImgTabela' src='img/shield.png'></td></tr>";
-												 } else {
-													 print "<td><a href='gerar_assistencia.php?id=$ID'><img class='botaoImgTabela' src='img/shield (1).png'></a></td></tr>";
-												 }
+												if ($pedido > 0) {
+													print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
+												} else {
+													print "<td><a href='gerar_pedido.php?id=$ID'><img class='botaoImgTabela' src='img/check2.png'></td>";
+												}
+												if ($retira > 0) {
+													print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
+												} else {
+													print "<td><a href='gerar_retira.php?id=$ID'><img class='botaoImgTabela' src='img/check2.png'></td>";
+												}
+												if ($entrega > 0) {
+													print "<td><img class='botaoImgTabela' src='img/cancel.png'></td>";
+												} else {
+													print "<td><a href='gerar_entrega.php?id=$ID'><img class='botaoImgTabela' src='img/check2.png'></td>";
+												}
+												if ($assistencia > 0) {
+													print "<td><img class='botaoImgTabela' src='img/cancel.png'></td></tr>";
+												} else {
+													print "<td><a href='gerar_assistencia.php?id=$ID'><img class='botaoImgTabela' src='img/check2.png'></a></td></tr>";
+												}
 										 	}
 						 				 ?>
 						 			</table>
