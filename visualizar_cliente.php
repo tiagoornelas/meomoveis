@@ -38,7 +38,7 @@
 			$cpf = filter_input(INPUT_GET, 'cpf', FILTER_SANITIZE_NUMBER_INT);
 			$termo_da_pesquisa = $_GET['cpf'];
 			$conteudo_pesquisa = "SELECT Cliente, ClienteCPF, DataDeb, DataCred,
-										        AVG(DateDiff(DataDeb, DataCred)) as 'Pontualidade'
+										        AVG(DateDiff(DataDeb, IFNULL(DataCred, CURRENT_DATE())) as 'Pontualidade'
 												    FROM lancamentos WHERE ClienteCPF=$cpf";
 			$sql = $conteudo_pesquisa;
 			$search = mysqli_query($conn,$sql);
