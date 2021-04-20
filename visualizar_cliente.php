@@ -88,7 +88,7 @@
 								elseif ($pontualidade > 0) {
 									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=verde>' . round($pontualidade) . ' dias de antecedência</b></il><br>';
 								} else {
-									if ($numero_pgto > 0 && $vencido <=0) {
+									if ($numero_pgto > 0) {
 									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=verde> Cliente pontual</b></il><br>';
 									}
 									else {
