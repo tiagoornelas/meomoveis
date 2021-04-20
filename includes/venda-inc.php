@@ -259,18 +259,18 @@
 		$valorTotal = ($precoVenda1 + $precoVenda2 + $precoVenda3 + $precoVenda4 + $precoVenda5 + $precoVenda6 + $precoVenda7 +
 									$precoVenda8 + $precoVenda9 + $precoVenda10 + $precoFrete);
 		$valorMenosEntrada = ($valorTotal - $valorEntrada);
+
+		echo "<div id='print'><button style='margin-left:1.5vmax'><a style='text-decoration:none;color:black' href='#' onclick='window.print()'>Imprimir</a></button><button><a style='text-decoration:none;color:black'href='../visualizar_cliente.php?cpf=$cpf'>Voltar</a></button><br><img id='printLogo' src='../img/logopreto.png'><br>";
 		  
 		if ($parcelas != 'À Vista' && $parcelas != 'Financeira' && $parcelas != 'Cartão') {
-		echo "<div id='print'><button style='margin-left:1.5vmax'><a style='text-decoration:none;color:black' href='#' onclick='window.print()'>Imprimir</a></button><button><a style='text-decoration:none;color:black'href='../visualizar_cliente.php?cpf=$cpf'>Voltar</a></button><br><img id='printLogo' src='../img/logopreto.png'><br>
-		    <h2>Comprovante de Venda</h2>
+		echo "<h2>Comprovante de Venda</h2>
 		    <h3><i>Número $compraID</i></h3>
 		    <p style='text-align: justify;text-justify: inter-word;'>Nas condições abaixo descritas e até o último vencimento abaixo exposto, pagarei por esta via de nota promissória a Martins e Ornelas LTDA (Meo Móveis),
 		    CNPJ 02.179.467/0001-76, ou a sua ordem a quantia de R$ ".number_format($valorTotal, 2, ',', '.')." em moeda
 		    corrente do país.</p>
 		    <p>Pagável em São Francisco do Glória/MG.</p>
 		    <h3>Dados do Emitente:</h3>";
-		} else { echo "<div id='print'>    <img id='printLogo' src='../img/logopreto.png'><br>
-		    <h2>Comprovante de Venda</h2>
+		} else { echo "<h2>Comprovante de Venda</h2>
 		    <h3><i>Número $compraID</i></h3>
 		    <h3>Comprovante de Venda:</h3>";}
 		
@@ -303,6 +303,12 @@
 				$parcelaN, $parcelaT, $valorTotal, $dataVenda, $valorTotal, $dataVenda);
 			mysqli_stmt_execute($stmt);
 			mysqli_stmt_close($stmt);
+
+			echo "Valor Total: R$" . number_format($valorTotal, 2, ',', '.') . "<br>";
+			echo "Valor de Entrada: R$" . number_format($valorEntrada, 2, ',', '.') . "<br><br><br><br>";
+			echo "x<br>";
+			echo "<i>".$nome."</div>";
+
 
 
 		} else {

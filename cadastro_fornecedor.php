@@ -67,7 +67,7 @@
 					if(this.value.length==11) return false;"><br>
 					<br>
 			<input class="botao" name="submit" type="submit" value="Cadastrar">
-			<a href="cadastro_fornecedor.php"><img src="img/close.png" class="close"></a>
+			<a href="visualizar_fornecedor.php"><img src="img/close.png" class="close"></a>
 		</form>
 
 		<?php

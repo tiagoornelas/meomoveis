@@ -12,7 +12,23 @@
 
 			<?php
 			require_once 'includes/dbh-inc.php';
-		  require_once 'includes/functions-inc.php';
+		  	require_once 'includes/functions-inc.php';
+				/* Pesquisa necessária para conhecimento da quantidade geral de vendas */
+				if (isset($_GET["start"])) {
+					$pesquisa_realizada = true;
+					$termo_da_pesquisa1 = $_GET['start'];
+					$termo_da_pesquisa2 = $_GET['end'];
+					$conteudo_pesquisa = "SELECT * from vendas where dataVenda > '$termo_da_pesquisa1' and dataVenda < '$termo_da_pesquisa2'
+						 ORDER BY dataVenda";
+					}
+					else {
+					$pesquisa_realizada = false;
+					$conteudo_pesquisa = "SELECT * from vendas ORDER BY dataVenda";
+				}
+	
+				$sql = $conteudo_pesquisa;
+				$search = mysqli_query($conn,$sql);
+			  $numero_vendas_totais = mysqli_num_rows($search);
 
 			if (isset($_GET["start"])) {
 				$pesquisa_realizada = true;
@@ -28,7 +44,6 @@
 
 			$sql = $conteudo_pesquisa;
 			$search = mysqli_query($conn,$sql);
-		  $numero_vendas = mysqli_num_rows($search);
 			 ?>
 
 </head>
@@ -44,25 +59,25 @@
 					<h3 class="legendaConsultas">
 						<?php
 						if ($pesquisa_realizada == true) {
-							if ($numero_vendas == 1) { /*Apenas para controle de plural */
-								print "Apenas $numero_vendas venda encontrada.";
+							if ($numero_vendas_totais == 1) { /*Apenas para controle de plural */
+								print "Apenas $numero_vendas_totais venda encontrada.";
 							}
-							else if ($numero_vendas == 0) {
+							else if ($numero_vendas_totais == 0) {
 								print "Nenhuma venda encontrada.";
 							}
 							else {
-								print "$numero_vendas vendas encontrados. (mostra máx. 50)";
+								print "$numero_vendas_totais vendas encontrados. (mostra máx. 50)";
 							}
 						}
 						else {
-							if ($numero_vendas == 1) { /*Apenas para controle de plural */
-								print "Apenas $numero_vendas venda registrado no total.";
+							if ($numero_vendas_totais == 1) { /*Apenas para controle de plural */
+								print "Apenas $numero_vendas_totais venda registrado no total.";
 							}
-							else if ($numero_vendas == 0) {
+							else if ($numero_vendas_totais == 0) {
 								print "Nenhuma venda registrada no total.";
 							}
 							else {
-								print "$numero_vendas vendas registradas no total. (mostra máx. 50)";
+								print "$numero_vendas_totais vendas registradas no total. (mostra máx. 50)";
 							}
 						}
 						?>
