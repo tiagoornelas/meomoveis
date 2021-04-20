@@ -38,7 +38,7 @@
 			$cpf = filter_input(INPUT_GET, 'cpf', FILTER_SANITIZE_NUMBER_INT);
 			$termo_da_pesquisa = $_GET['cpf'];
 			$conteudo_pesquisa = "SELECT Cliente, ClienteCPF, DataDeb, DataCred,
-										        AVG(DateDiff(DataDeb, DataCred)) as 'Pontualidade'
+										        AVG(DateDiff(DataDeb, git DataCred)) as 'Pontualidade'
 												    FROM lancamentos WHERE ClienteCPF=$cpf";
 			$sql = $conteudo_pesquisa;
 			$search = mysqli_query($conn,$sql);
@@ -80,16 +80,16 @@
       <ul class="">
 				<?php
 								if ($pontualidade < -30 && $numero_pgto > 0) {
-									echo '<il><legend>Pontualidade Média:</legend><b class=vermelho>' . round(-1 * $pontualidade) . ' dias de atraso</b></il><br>';
+									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=vermelho>' . round(-1 * $pontualidade) . ' dias de atraso</b></il><br>';
 								}
 								elseif ($pontualidade >= -30 && $pontualidade < 0) {
-									echo '<il><legend>Pontualidade Média:</legend><b class=amarelo>' . round(-1 * $pontualidade) . ' dias de atraso</b></il><br>';
+									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=amarelo>' . round(-1 * $pontualidade) . ' dias de atraso</b></il><br>';
 								}
 								elseif ($pontualidade > 0) {
-									echo '<il><legend>Pontualidade Média:</legend><b class=verde>' . round($pontualidade) . ' dias de antecedência</b></il><br>';
+									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=verde>' . round($pontualidade) . ' dias de antecedência</b></il><br>';
 								} else {
 									if ($numero_pgto > 0) {
-									echo '<il><legend>Pontualidade Média:</legend><b class=verde> Cliente pontual</b></il><br>';
+									echo '<il><legend>Pont. Média (Pgtos Realizados):</legend><b class=verde> Cliente pontual</b></il><br>';
 									}
 									else {
 
