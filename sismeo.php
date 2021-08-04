@@ -51,6 +51,17 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 
 	while($exibirResultados = mysqli_fetch_array($search)) {
 		$aReceberEsteDia = $exibirResultados[0];}
+		
+		// PESQUISA RECEBIDOS NO DIA
+		$conteudo_pesquisa = "SELECT SUM(Credito)
+		FROM lancamentos
+		WHERE DataCred = CURRENT_DATE";
+	
+	$sql = $conteudo_pesquisa;
+	$search = mysqli_query($conn,$sql);
+	
+	while($exibirResultados = mysqli_fetch_array($search)) {
+	$recebidosEsteDia = $exibirResultados[0]; }
 
 		// PESQUISA VENDAS DO MÊS
 		$conteudo_pesquisa = "SELECT SUM(preco)
@@ -133,11 +144,16 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								<?php
 								    $porcentagemSite = intval(($vendasMesSite/$vendasMes)*100);
 										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Recebíveis do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
+										if ($recebidosEsteDia > 0) {
+										print "<tr><td><b class='negrito'>Recebidos no Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
+										} else {
+											print "<tr><td><b class='negrito'>Recebidos no Dia</b></td><td>R$ 0,00</td></tr>";
+										}
 										print "<tr><td><b class='negrito'>Recebíveis do Mês</b></td><td>R$ " . number_format($aReceberEsteMes, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteMes > 0) {
 										print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ " . number_format($recebidosEsteMes, 2, ',', '.') . "</td></tr>";
 										} else {
-											print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ 0,00 (0%)</td></tr>";
+											print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ 0,00</td></tr>";
 										}
 										print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ " . number_format($vendasMes, 2, ',', '.') . "</td></tr>";
 										if ($vendasMes > 0) {
