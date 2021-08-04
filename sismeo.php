@@ -55,7 +55,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 		// PESQUISA RECEBIDOS NO DIA
 		$conteudo_pesquisa = "SELECT SUM(Credito)
 		FROM lancamentos
-		WHERE DataCred = CURRENT_DATE";
+		WHERE DataDeb = CURRENT_DATE";
 	
 	$sql = $conteudo_pesquisa;
 	$search = mysqli_query($conn,$sql);
