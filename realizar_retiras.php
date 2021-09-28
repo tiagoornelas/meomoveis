@@ -128,21 +128,21 @@
 
 										 if ($whatsapp > 0 && $whatsappEmpresa > 0) {
 											 print "<td><a href='realizar_retiras.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
-											 <a href='https://web.whatsapp.com/send?phone=55$whatsappEmpresa
+											 <a href='https://api.whatsapp.com/send?phone=55$whatsappEmpresa
 											 &text=Tenho%20um%20pedido%20de%20$produto%20aí%20com%20vocês%20pendente%20de%20retirada%2C%20poderia%20ver%20para%20mim%20se%20já%20está%20disponível%3F%0AA%20minha%20razão%20social%20é%20Martins%20e%20Ornelas%20LTDA%0ACNPJ%2002.179.467%2F0001-76' target='_blank'>
 											 <img class='botaoImgTabela' src='img/whatsapp-retira.png'></a>
-											 <a href='https://web.whatsapp.com/send?phone=55$whatsapp
+											 <a href='https://api.whatsapp.com/send?phone=55$whatsapp
 											 &text=Tenho%20um%20pedido%20de%20$produto%20aí%20com%20vocês%20pendente%20de%20retirada%2C%20poderia%20ver%20para%20mim%20se%20já%20está%20disponível%3F%0AA%20minha%20razão%20social%20é%20Martins%20e%20Ornelas%20LTDA%0ACNPJ%2002.179.467%2F0001-76' target='_blank'>
 											 <img class='botaoImgTabela' src='img/whatsapp-vendedor.png'></a></td></tr>";
 
 										} elseif ($whatsapp > 0 && $whatsappEmpresa <= 0) {
 											print "<td><a href='realizar_retiras.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
-											<a href='https://web.whatsapp.com/send?phone=55$whatsapp
+											<a href='https://api.whatsapp.com/send?phone=55$whatsapp
 											&text=Tenho%20um%20pedido%20de%20$produto%20aí%20com%20vocês%20pendente%20de%20retirada%2C%20poderia%20ver%20para%20mim%20se%20já%20está%20disponível%3F%0AA%20minha%20razão%20social%20é%20Martins%20e%20Ornelas%20LTDA%0ACNPJ%2002.179.467%2F0001-76' target='_blank'>
 											<img class='botaoImgTabela' src='img/whatsapp-vendedor.png'></a></td></tr>";
 										} elseif ($whatsapp <= 0 && $whatsappEmpresa > 0) {
 											print "<td><a href='realizar_retiras.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
-											<a href='https://web.whatsapp.com/send?phone=55$whatsappEmpresa
+											<a href='https://api.whatsapp.com/send?phone=55$whatsappEmpresa
 											&text=Tenho%20um%20pedido%20de%20$produto%20aí%20com%20vocês%20pendente%20de%20retirada%2C%20poderia%20ver%20para%20mim%20se%20já%20está%20disponível%3F%0AA%20minha%20razão%20social%20é%20Martins%20e%20Ornelas%20LTDA%0ACNPJ%2002.179.467%2F0001-76' target='_blank'>
 											<img class='botaoImgTabela' src='img/whatsapp-retira.png'></a></td></tr>";
 										 } else {
