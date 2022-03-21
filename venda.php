@@ -63,6 +63,7 @@
 									<label for="origem">Origem:</label>
 				            <select id="origem" name="origem" class="miniDropDown">
 				              <option value="Matriz">Matriz</option>
+				              <option value="Fervedouro">Fervedouro</option>
 				              <option value="Site">Site</option>
 				            </select><br><br>
 				          <label for="parcelas">Condição:</label>
