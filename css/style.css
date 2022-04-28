@@ -327,42 +327,42 @@
 			display: inline-block;
 			position: absolute;
 			width: 20vmax;
-			top: 17vmax;
+			top: 22vmax;
 			right: -3.5vmax;
 		}
 
 		#tituloLogistica {
 			position: absolute;
 			width: 20vmax;
-			top: 14.5vmax;
+			top: 20.5vmax;
 			right: -2.5vmax;
 		}
 
 		#articleDash1 {
 			display: inline-block;
 			position: absolute;
-			top: 38vmax;
+			top: 42vmax;
 			left: 18vmax;
 		}
 
 		#articleDash2 {
 			display: inline-block;
 			position: absolute;
-			top: 38vmax;
+			top: 42vmax;
 			left: 40vmax;
 		}
 
 		#articleDash3 {
 			display: inline-block;
 			position: absolute;
-			top: 38vmax;
+			top: 42vmax;
 			left: 62vmax;
 		}
 
 		#articleDash4 {
 			display: inline-block;
 			position: absolute;
-			top: 46vmax;
+			top: 50vmax;
 			left: 84vmax;
 		}
 
