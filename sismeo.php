@@ -74,6 +74,30 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 	while($exibirResultados = mysqli_fetch_array($search)) {
 		$vendasMes = $exibirResultados[0];}
 
+    // PESQUISA VENDAS DO MÊS NA MATRIZ
+    $conteudo_pesquisa = "SELECT SUM(preco)
+    FROM vendas
+    WHERE MONTH(dataVenda) = MONTH(CURRENT_DATE) AND YEAR(dataVenda) = YEAR(CURRENT_DATE)
+    AND loja = 'MATRIZ'";
+    
+    $sql = $conteudo_pesquisa;
+    $search = mysqli_query($conn,$sql);
+    
+    while($exibirResultados = mysqli_fetch_array($search)) {
+    $vendasMesMatriz = $exibirResultados[0];}
+
+    // PESQUISA VENDAS DO MÊS EM FERVEDOURO
+    $conteudo_pesquisa = "SELECT SUM(preco)
+    FROM vendas
+    WHERE MONTH(dataVenda) = MONTH(CURRENT_DATE) AND YEAR(dataVenda) = YEAR(CURRENT_DATE)
+    AND loja = 'FERVEDOURO'";
+    
+    $sql = $conteudo_pesquisa;
+    $search = mysqli_query($conn,$sql);
+    
+    while($exibirResultados = mysqli_fetch_array($search)) {
+    $vendasMesFervedouro = $exibirResultados[0];}
+
 		// PESQUISA VENDAS DO MÊS NO SITE
 		$conteudo_pesquisa = "SELECT SUM(preco)
 			FROM vendas
@@ -85,7 +109,6 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 
 		while($exibirResultados = mysqli_fetch_array($search)) {
 		$vendasMesSite = $exibirResultados[0];}
-
 
 	 // PESQUISA PEDIDOS PENDENTES
 	 $conteudo_pesquisa = "SELECT SUM(pedido)
@@ -155,9 +178,23 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 										} else {
 											print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ 0,00</td></tr>";
 										}
-										print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ " . number_format($vendasMes, 2, ',', '.') . "</td></tr>";
-										if ($vendasMes > 0) {
-										print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
+                    if ($vendasMes > 0) {
+                      print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ " . number_format($vendasMes, 2, ',', '.') . "</td></tr>";
+                    } else {
+                      print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ 0,00</td></tr>";
+                    }
+                    if ($vendasMesMatriz > 0) {
+                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ " . number_format($vendasMesMatriz, 2, ',', '.') . "</td></tr>";
+                    } else {
+                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ 0,00</td></tr>";
+                    }
+                    if ($vendasMesFervedouro > 0) {
+                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ " . number_format($vendasMesFervedouro, 2, ',', '.') . "</td></tr>";
+                    } else {
+                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ 0,00</td></tr>";
+                    }
+										if ($vendasMesSite > 0) {
+										  print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
 										} else {
 											print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ 0,00 (0%)</td></tr>";
 										}
