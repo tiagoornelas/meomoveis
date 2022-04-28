@@ -166,6 +166,8 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								<th style='width: 30%'></th>
 								<?php
 								    $porcentagemSite = intval(($vendasMesSite/$vendasMes)*100);
+								    $porcentagemMatriz = intval(($vendasMesMatriz/$vendasMes)*100);
+								    $porcentagemFervedouro = intval(($vendasMesFervedouro/$vendasMes)*100);
 										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Recebíveis do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteDia > 0) {
 										print "<tr><td><b class='negrito'>Recebidos no Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
@@ -184,14 +186,14 @@ while($exibirResultados = mysqli_fetch_array($search)) {
                       print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ 0,00</td></tr>";
                     }
                     if ($vendasMesMatriz > 0) {
-                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ " . number_format($vendasMesMatriz, 2, ',', '.') . "</td></tr>";
+                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ " . number_format($vendasMesMatriz, 2, ',', '.') . " (" . $porcentagemMatriz . "%)</td></tr>";
                     } else {
-                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ 0,00</td></tr>";
+                      print "<tr><td><b class='negrito'>Vendas da Matriz</b></td><td>R$ 0,00 (0%)</td></tr>";
                     }
                     if ($vendasMesFervedouro > 0) {
-                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ " . number_format($vendasMesFervedouro, 2, ',', '.') . "</td></tr>";
+                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ " . number_format($vendasMesFervedouro, 2, ',', '.') . " (" . $porcentagemFervedouro . "%)</td></tr>";
                     } else {
-                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ 0,00</td></tr>";
+                      print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ 0,00 (0%)</td></tr>";
                     }
 										if ($vendasMesSite > 0) {
 										  print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
