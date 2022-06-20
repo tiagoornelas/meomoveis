@@ -75,7 +75,7 @@
 					      $vencido = $exibirResultados[6];}
 		 ?>
      <!-- FORMULÁRIO -->
-    <h1 class="tituloBanner"><?php echo $nome . " <a href='https://web.whatsapp.com/send?phone=55$telefone' target='_blank'><img src='img/whatsapp.png' id='whatsappVisualizarCliente'></a>"?></h1><br><br>
+    <h1 class="tituloBanner"><?php echo $nome . " <a href='https://api.whatsapp.com/send?phone=55$telefone' target='_blank'><img src='img/whatsapp.png' id='whatsappVisualizarCliente'></a>"?></h1><br><br>
     <div id="informacoesDoCliente">
       <ul class="">
 				<?php
