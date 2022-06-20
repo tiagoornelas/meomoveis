@@ -6,7 +6,7 @@
 		header {
 			display: block;
 			height: 12vmax;
-			background-color: #167BC3}
+			background-color: #76B6E3}
 
 		nav li {
 			display:inline;
@@ -593,7 +593,7 @@
 			width: 8vmax;
 			height: 2vmax;
 			margin: 1vmax 1vmax 0 0;
-			background-color: #167BC3;
+			background-color: #76B6E3;
 			border: none;
 			color: white;
 			cursor: pointer;
@@ -603,7 +603,7 @@
 			width: 12vmax;
 			height: 2vmax;
 			margin: 1vmax 1vmax 0 0;
-			background-color: #167BC3;
+			background-color: #76B6E3;
 			border: none;
 			color: white;
 			cursor: pointer;
@@ -623,7 +623,7 @@
 			width: 7vmax;
 			height: 2vmax;
 			margin: 1vmax 1vmax 0 0;
-			background-color: #167BC3;
+			background-color: #76B6E3;
 			border: none;
 			color: white;
 			cursor: pointer;
@@ -715,7 +715,7 @@
 			text-decoration: none;
 			font-size: 2.5vmax;
 			font-weight: bolder;
-			color: #167BC3;
+			color: #76B6E3;
 			margin: 2vmax 0 0 2.5vmax;
 		}
 
@@ -723,13 +723,13 @@
 			text-decoration: none;
 			font-size: 2.5vmax;
 			font-weight: bolder;
-			color: #167BC3;
+			color: #76B6E3;
 		}
 
 		.titulosBarraLateral {
 			font-size: 1.5vmax;
 			font-weight: bold;
-			color: #167BC3;
+			color: #76B6E3;
 			margin-top: 2vmax;
 		}
 
@@ -761,7 +761,7 @@
 
 		.verde {
 			font-weight: bold;
-			color: #167BC3;
+			color: #76B6E3;
 		}
 
 		.popup {
@@ -873,7 +873,7 @@
 			/* HOVERS */
 
 		footer li a:hover {
-			color: #167BC3;
+			color: #76B6E3;
 			transition: 0.5s color}
 
 		nav a:hover {
