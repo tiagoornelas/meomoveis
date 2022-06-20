@@ -20,10 +20,10 @@
       <a href='index.php'><img id="logotipo" src="/img/logo_branco.png"></a>
       <ul id="listaNavegacao"> 			<!-- 1.3 - Menu de Navegação -->
         <li><a target="_blank" href="/index.php">início</a></li>
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20marcas%20que%20voc%C3%AAs%20trabalham!">marcas</a></li>
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968&text=Ol%C3%A1%2C%20qual%20tipo%20de%20m%C3%B3vel%20voc%C3%AAs%20trabalham%3F">produtos</a></li>
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968&text=Ol%C3%A1%2C%20gostaria%20de%20verificar%20se%20voc%C3%AAs%20fazem%20entrega%20na%20minha%20cidade.">entregas</a></li>
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968"
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20marcas%20que%20voc%C3%AAs%20trabalham!">marcas</a></li>
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20qual%20tipo%20de%20m%C3%B3vel%20voc%C3%AAs%20trabalham%3F">produtos</a></li>
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20gostaria%20de%20verificar%20se%20voc%C3%AAs%20fazem%20entrega%20na%20minha%20cidade.">entregas</a></li>
+        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=553237541101"
               target="_blank">whatsapp</a></li>
         <?php
           if (isset($_SESSION["usuario"])) {

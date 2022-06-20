@@ -56,7 +56,7 @@
 			direto da fábrica e serviço de montagem inclusos.<br>
 			Aproveite para ver as nossas ofertas da semana e se surpreenda.
 			</h2>
-			<button id="buttonLanding"><a class="HideLink" target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968&text=Ol%C3%A1%2C%20gostaria%20de%20ver%20as%20ofertas%20da%20semana!">
+			<button id="buttonLanding"><a class="HideLink" target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20gostaria%20de%20ver%20as%20ofertas%20da%20semana!">
 			VER OFERTAS DA SEMANA</a></button>
 		</div>
 		<div id="banner2">
@@ -74,7 +74,7 @@
 			A variedade de fábricas garante que teremos, todas as semanas, as melhores soluções e os melhores preços, aliando atendimento personalizado
 			e agilidade na entrega, para garantir que você tenha o que precisa, no preço que pode pagar.
 			</h2>
-			<button id="buttonLanding"><a class="HideLink" target="_blank" href="https://api.whatsapp.com/send?phone=5532998388968&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20seus%20produtos!">
+			<button id="buttonLanding"><a class="HideLink" target="_blank" href="https://api.whatsapp.com/send?phone=553237541101&text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20seus%20produtos!">
 				CONHECER NOSSOS PRODUTOS</a></button>
 		</div>
 	</main>
