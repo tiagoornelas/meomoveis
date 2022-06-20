@@ -68,7 +68,7 @@
 						    echo "<td><i>R$ " . number_format($pagamento, 2, ',', '.') . "</i></td>";
 						 }
 						if ($whatsapp > 0) {
-							print "<td><a href='https://web.whatsapp.com/send?phone=55$whatsapp
+							print "<td><a href='https://api.whatsapp.com/send?phone=55$whatsapp
 							&text=Olá%2C%20cliente!%20Este%20é%20uma%20mensagem%20automática%20para%20te%20lembrar%20que%20hoje%20é%20a%20data%20de%20vencimento%20da%20sua%20parcela%20no%20valor%20de%20R%24%20$valor%20.%20Aguardamos%20você%20na%20loja%20e%20caso%20precise%20de%20ajuda%20para%20efetuar%20o%20pagamento%2C%20podemos%20passar%20conta%20para%20transferência%2C%20PIX%20ou%20boleto%20bancário.%20Obrigado!' target='_blank'>
 							<img class='botaoImgTabela' src='img/whatsapp-cliente.png'></a></td></tr>"; }
 				}

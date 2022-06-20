@@ -123,7 +123,7 @@
 
 										 if ($whatsapp > 0) {
 											 print "<td><a href='realizar_pedidos.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
-											 <a href='https://web.whatsapp.com/send?phone=55$whatsapp
+											 <a href='https://api.whatsapp.com/send?phone=55$whatsapp
 											 &text=Pedido%20da%20Martins%20e%20Ornelas%20LTDA%0A----------------------------------------------
 											 %0ACliente%3A%20$cliente%0AFornecedor%3A%20$fornecedor%0AProduto%3A%20*$produto*' target='_blank'>
 											 <img class='botaoImgTabela' src='img/whatsapp-vendedor.png'></a></td></tr>";

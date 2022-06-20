@@ -43,7 +43,7 @@
       </ul>
 				<?php
 				if ($celular_do_vendedor != '') {
-					print "<button class='botao'><a target='_blank' href='https://web.whatsapp.com/send?phone=55$celular_do_vendedor' class='hideLink'>Contato</a></button>";
+					print "<button class='botao'><a target='_blank' href='https://api.whatsapp.com/send?phone=55$celular_do_vendedor' class='hideLink'>Contato</a></button>";
 				}
 				?>
                 <button class="botao" style="background-image: linear-gradient(to right, #62CED1, #5DC771);"><a href="<?php echo "editar_fornecedor.php?id=$id";?>" class="hideLink">Editar</a></button>

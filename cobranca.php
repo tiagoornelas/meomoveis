@@ -96,7 +96,7 @@
 								print "<td class=verde>$pontualidade</td>";
 								}
 						if ($whatsapp > 0) {
-							print "<td><a href='https://web.whatsapp.com/send?phone=55$whatsapp
+							print "<td><a href='https://api.whatsapp.com/send?phone=55$whatsapp
 							&text=Olá%2C%20$cliente!%20Não%20consta%20no%20nosso%20sistema%20o%20pagamento%20da%20parcela%20*".$parcelaN."/".$parcelaT."*%20que%20está%20atrasada%20em%20*". (-1* $pontualidade) ."%20dias*%20%20no%20valor%20de%20*R$%20". number_format($valorRestante, 2, ',', '.') ."*.%0AO%20que%20podemos%20fazer%20para%20ajudá-lo%20a%20acertar%20este%20pagamento%3F%0ACaso%20já%20tenha%20efetuado%20o%20pagamento%2C%20gentileza%20nos%20avisar.' target='_blank'>
 							<img class='botaoImgTabela' src='img/whatsapp-cliente.png'></a></td></tr>"; }
 				}

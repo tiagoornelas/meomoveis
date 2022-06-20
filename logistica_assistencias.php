@@ -126,7 +126,7 @@
 
 										 if ($whatsapp > 0) {
 											 print "<td><a href='realizar_assistencias.php?id=$id'><img class='botaoImgTabela' src='img/check.png'></a>
-											 <a href='https://web.whatsapp.com/send?phone=55$whatsapp
+											 <a href='https://api.whatsapp.com/send?phone=55$whatsapp
 											 &text=Olá%2C%20cliente!%20Temos%20uma%20assistência%20técnica%20do%20produto%20$produto%20para%20realizar.%20Podemos%20agendar%3F' target='_blank'>
 											 <img class='botaoImgTabela' src='img/whatsapp-cliente.png'></a></td></tr>";
 										 } else {
