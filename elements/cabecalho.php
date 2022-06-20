@@ -28,10 +28,10 @@
         <?php
           if (isset($_SESSION["usuario"])) {
             $usuario = $_SESSION["usuario"];
-            echo '<li><a href="/sismeo.php">sismeo</a></li>';
+            echo '<li><a style="color: white" href="/sismeo.php">sismeo</a></li>';
           }
           else {
-            echo '<li><a href="/login.php">sismeo</a></li>';
+            echo '<li><a style="color: white" href="/login.php">sismeo</a></li>';
           }
         ?>
       </ul>
