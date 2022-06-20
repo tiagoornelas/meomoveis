@@ -161,7 +161,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 					<div id="VendasDash" class="titulo">
 							<table id="tabelaVendasDash" style='width: 25vmax;'>
 								<h1 class="titulosDash"><a class="titulosDashHideLink" href='consulta_vendas.php'>Vendas</a>
-									<button id="botaoVenda" class="botao" style="background-color: #76B6E3;"><a href="venda_expressa.php" class="hideLink">Venda Expressa</a></button></h1><br>
+									<button id="botaoVenda" class="botao" style="background-color: #167BC3;"><a href="venda_expressa.php" class="hideLink">Venda Expressa</a></button></h1><br>
 								<th style='width: 40%'></th>
 								<th style='width: 30%'></th>
 								<?php
@@ -234,7 +234,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 									 		<h1 class="titulosDash">Rankings</h1><br><br>
 										<div id="tabelaBotaoDash">
 										 <button class="botao" style="background:#62CED1"><a href="ranking_pontuais.php" class="hideLink">Mais Pontuais</a></button>
-										 <button class="botao" style="background:#76B6E3"><a href="ranking_npontuais.php" class="hideLink">Menos Pontuais</a></button><br>
+										 <button class="botao" style="background:#167BC3"><a href="ranking_npontuais.php" class="hideLink">Menos Pontuais</a></button><br>
 										 <button class="botao" style="background:#62D196"><a href="ranking_compras.php" class="hideLink">Compras</a></button>
 										 <button class="botao" style="background:#5DC771"><a href="ranking_divida.php" class="hideLink">Dívida</a></button>
 									 </div>
