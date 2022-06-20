@@ -19,7 +19,7 @@
           <li><a href="/meomoveis/marcas.php">marcas</a></li>
           <li><a href="/meomoveis/categorias.php">categorias</a></li>
           <li><a href="/meomoveis/entregas.php">entregas</a></li>
-          <li><a href="https://api.whatsapp.com/send?phone=5532984018901"
+          <li><a href="https://api.whatsapp.com/send?phone=553237541101"
                 target="_blank">whatsapp</a></li>
           <li><a href="/meomoveis/pesquisar.php">sismeo</a></li>
       </ul>
