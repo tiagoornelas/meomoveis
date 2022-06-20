@@ -204,7 +204,7 @@
 			margin: 1vmax 3vmax 1vmax auto;
 			align-items: center;
 			font-weight: bold;
-			background-image: linear-gradient(to right, #62CED1, #5DC771);
+			background-color: #167BC3;
 			border: none;
 			color: white;
 			cursor: pointer;
@@ -970,7 +970,7 @@
 				margin: 1vmax 0;
 				align-items: center;
 				font-weight: bold;
-				background-image: linear-gradient(to right, #62CED1, #5DC771);
+				background-color: ;
 				border: none;
 				color: white;
 				cursor: pointer;
