@@ -28,8 +28,12 @@
   // PESQUISA RECEBIVEIS / RECEBIDO MES
   $conteudo_pesquisa = "SELECT 
       dia,
-      SUM(credito) AS credito,
-      SUM(debito) AS debito,
+      IF(dia > CURRENT_DATE,
+          NULL,
+          SUM(credito)) AS credito,
+      IF(dia > CURRENT_DATE,
+          NULL,
+          SUM(debito)) AS debito,
       SUM(recebido) AS recebido
     FROM
       (SELECT 

@@ -98,6 +98,20 @@ while($exibirResultados = mysqli_fetch_array($search)) {
     while($exibirResultados = mysqli_fetch_array($search)) {
     $vendasMesFervedouro = $exibirResultados[0];}
 
+    // PESQUISA ATRASADOS
+    $conteudo_pesquisa = "SELECT 
+          SUM(debito) - SUM(credito)
+      FROM
+          lancamentos
+      WHERE
+          dataDeb < CURRENT_DATE";
+    
+    $sql = $conteudo_pesquisa;
+    $search = mysqli_query($conn,$sql);
+    
+    while($exibirResultados = mysqli_fetch_array($search)) {
+    $abertoTotal = $exibirResultados[0];}
+
 		// PESQUISA ADIMPLÊNCIA, ROI E LUCRO ESTIMADO
 		$conteudo_pesquisa = "SELECT 
           FORMAT(SUM(credito) / SUM(debito) * 100,
@@ -182,6 +196,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
                     print "<tr><td><b class='negrito'>Adimplência</b></td><td>" . $adimplencia . " %</td></tr>";
                     print "<tr><td><b class='negrito'>ROI Bruto</b></td><td>" . $roiBruto . " %</td></tr>";
                     print "<tr><td><b class='negrito'>Média Lucro Bruto Mês</b></td><td>R$ " . $lucroBrutoMes . "</td></tr>";
+                    print "<tr><td><b class='negrito'>Aberto Total</b></td><td>R$ " . $abertoTotal . "</td></tr>";
 										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Créditos do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteDia > 0) {
 										print "<tr><td><b class='negrito'>Creditados do Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
