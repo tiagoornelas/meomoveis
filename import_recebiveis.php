@@ -69,6 +69,7 @@
                 <th>Crédito</th>
                 <th>Creditado</th>
                 <th>Efetivado no dia</th>
+                <th>Custo Total</th>
             </tr>
             <?php
               while($exibirResultados = mysqli_fetch_array($search)) {
@@ -81,6 +82,7 @@
                 print "<td>$debito</td>";
                 print "<td>$credito</td>";
                 print "<td>$recebido</td></tr>";
+                print "<td>$custoTotal</td></tr>";
               }
             ?>
         </table>

@@ -168,7 +168,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 <body>
 
 		 <main>
-			  <iframe id="grafico" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=1776382643&amp;format=interactive"></iframe>
+     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=1380630113&amp;format=interactive"></iframe>
 					<div id="VendasDash" class="titulo">
 							<table id="tabelaVendasDash" style='width: 25vmax;'>
 								<h1 class="titulosDash"><a class="titulosDashHideLink" href='consulta_vendas.php'>Vendas</a>
@@ -181,7 +181,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								    $porcentagemFervedouro = intval(($vendasMesFervedouro/$vendasMes)*100);
                     print "<tr><td><b class='negrito'>Adimplência</b></td><td>" . $adimplencia . " %</td></tr>";
                     print "<tr><td><b class='negrito'>ROI Bruto</b></td><td>" . $roiBruto . " %</td></tr>";
-                    print "<tr><td><b class='negrito'>Média Lucro Bruto Mês</b></td><td>R$ " . $lucroBrutoMes . " %</td></tr>";
+                    print "<tr><td><b class='negrito'>Média Lucro Bruto Mês</b></td><td>R$ " . number_format($lucroBrutoMes, 2, ',', '.') . "</td></tr>";
 										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Créditos do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteDia > 0) {
 										print "<tr><td><b class='negrito'>Creditados do Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
@@ -261,7 +261,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								 <article id="articleDash4" class='DashCaixa'>
 										<div id="tabelaBotaoDash">
 											<h1><b class='negrito'>Versão</b></h1>
-										 <h2>Sismeo v0.3 Beta</h2>
+										 <h2>Sismeo v0.4 - PHP</h2>
 										 <h2>Tiago Martins Ornelas</h2>
 									 </div>
 								 </article>
