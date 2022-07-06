@@ -28,9 +28,7 @@
   // PESQUISA RECEBIVEIS / RECEBIDO MES
   $conteudo_pesquisa = "SELECT 
       dia,
-      IF(dia > CURRENT_DATE,
-          NULL,
-          SUM(credito)) AS credito,
+      IFNULL(SUM(credito), 0) AS credito,
       IF(dia > CURRENT_DATE,
           NULL,
           SUM(debito)) AS debito,
@@ -40,7 +38,7 @@
           dataDeb AS dia,
               SUM(debito) AS debito,
               SUM(credito) AS credito,
-              IF(dataDeb<CURRENT_DATE, 0, NULL) AS recebido
+              IF(dataDeb < CURRENT_DATE, 0, NULL) AS recebido
       FROM
           lancamentos
       WHERE
@@ -48,8 +46,8 @@
               AND YEAR(DataDeb) = YEAR(CURDATE())
       GROUP BY DAY(dataDeb) UNION SELECT 
           dataCred AS dia,
-              IF(dataCred<CURRENT_DATE, 0, NULL) AS debito,
-              IF(dataCred<CURRENT_DATE, 0, NULL) AS credito,
+              IF(dataCred < CURRENT_DATE, 0, NULL) AS debito,
+              IF(dataCred < CURRENT_DATE, 0, NULL) AS credito,
               SUM(credito) AS recebido
       FROM
           lancamentos
