@@ -40,7 +40,7 @@
           dataDeb AS dia,
               SUM(debito) AS debito,
               SUM(credito) AS credito,
-              NULL AS recebido
+              IF(dataDeb<CURRENT_DATE, 0, NULL) AS recebido
       FROM
           lancamentos
       WHERE
@@ -48,8 +48,8 @@
               AND YEAR(DataDeb) = YEAR(CURDATE())
       GROUP BY DAY(dataDeb) UNION SELECT 
           dataCred AS dia,
-              NULL AS debito,
-              NULL AS credito,
+              IF(dataCred<CURRENT_DATE, 0, NULL) AS debito,
+              IF(dataCred<CURRENT_DATE, 0, NULL) AS credito,
               SUM(credito) AS recebido
       FROM
           lancamentos
