@@ -214,7 +214,6 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 					</div>
 									<div class="titulo">
 										<table id="tabelaLogisticaDash">
-											<h1 id="tituloLogistica" class="titulosDash"><a class="titulosDashHideLink" href='logistica_pedidos.php'>Logística</a></h1><br>
 											<th><b class='negrito'>Pedidos</b></th>
 											<th><b class='negrito'>Retiras</b></th>
 											<th><b class='negrito'>Entregas</b></th>
