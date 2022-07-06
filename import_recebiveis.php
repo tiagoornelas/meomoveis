@@ -69,7 +69,7 @@
                 <th>Crédito</th>
                 <th>Creditado</th>
                 <th>Efetivado no dia</th>
-                <th>Custo Total</th>
+                <?php print "<th>$custoTotal</th>" ?>
             </tr>
             <?php
               while($exibirResultados = mysqli_fetch_array($search)) {

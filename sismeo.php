@@ -168,7 +168,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 <body>
 
 		 <main>
-     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=1380630113&amp;format=interactive"></iframe>
+     <iframe id="grafico" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5BdFBs_GDEi0-ybTb0HAGM2uBoBNHQJI-diClxMdbeVEGVbUpgdvJenYevHclt-7Gcabu3bbPOZaN/pubchart?oid=1380630113&amp;format=interactive"></iframe>
 					<div id="VendasDash" class="titulo">
 							<table id="tabelaVendasDash" style='width: 25vmax;'>
 								<h1 class="titulosDash"><a class="titulosDashHideLink" href='consulta_vendas.php'>Vendas</a>
