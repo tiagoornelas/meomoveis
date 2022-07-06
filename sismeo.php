@@ -100,7 +100,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 
     // PESQUISA ATRASADOS
     $conteudo_pesquisa = "SELECT 
-          SUM(debito) - SUM(credito)
+          FORMAT(SUM(debito) - SUM(credito), 2)
       FROM
           lancamentos
       WHERE
