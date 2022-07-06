@@ -19,10 +19,10 @@
     include('elements/barraLateral.php');
 
 		$pesquisa_realizada = true;
-		// PESQUISA RECEBIVEIS DO MÊS
+		// PESQUISA CRÉDITOS DO MÊS
 		$conteudo_pesquisa = "SELECT SUM(Debito)
 			FROM lancamentos
-			WHERE MONTH(DataDeb) = MONTH(CURRENT_DATE)";
+			WHERE MONTH(DataDeb) = MONTH(CURRENT_DATE) AND YEAR(DataDeb) = YEAR(CURRENT_DATE)";
 
 	$sql = $conteudo_pesquisa;
 	$search = mysqli_query($conn,$sql);
@@ -30,10 +30,10 @@
 	while($exibirResultados = mysqli_fetch_array($search)) {
 		$aReceberEsteMes = $exibirResultados[0]; }
 
-	// PESQUISA RECEBIDOS NO MÊS
+	// PESQUISA CREDITADOS DO MÊS
 	$conteudo_pesquisa = "SELECT SUM(Credito)
-		FROM lancamentos
-		WHERE MONTH(DataCred) = MONTH(CURRENT_DATE) AND YEAR(DataCred) = YEAR(CURRENT_DATE)";
+    FROM lancamentos
+    WHERE MONTH(DataDeb) = MONTH(CURRENT_DATE) AND YEAR(DataDeb) = YEAR(CURRENT_DATE)";
 
 $sql = $conteudo_pesquisa;
 $search = mysqli_query($conn,$sql);
@@ -41,7 +41,7 @@ $search = mysqli_query($conn,$sql);
 while($exibirResultados = mysqli_fetch_array($search)) {
 	$recebidosEsteMes = $exibirResultados[0]; }
 
-		// PESQUISA RECEBIVEIS DO DIA
+		// PESQUISA CRÉDITOS DO DIA
 		$conteudo_pesquisa = "SELECT SUM(debito)
 			FROM lancamentos
 			WHERE DataDeb = CURRENT_DATE";
@@ -52,7 +52,7 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 	while($exibirResultados = mysqli_fetch_array($search)) {
 		$aReceberEsteDia = $exibirResultados[0];}
 		
-		// PESQUISA RECEBIDOS NO DIA
+		// PESQUISA CREDITADOS DO DIA
 		$conteudo_pesquisa = "SELECT SUM(Credito)
 		FROM lancamentos
 		WHERE DataDeb = CURRENT_DATE";
@@ -98,17 +98,28 @@ while($exibirResultados = mysqli_fetch_array($search)) {
     while($exibirResultados = mysqli_fetch_array($search)) {
     $vendasMesFervedouro = $exibirResultados[0];}
 
-		// PESQUISA VENDAS DO MÊS NO SITE
-		$conteudo_pesquisa = "SELECT SUM(preco)
-			FROM vendas
-			WHERE MONTH(dataVenda) = MONTH(CURRENT_DATE) AND YEAR(dataVenda) = YEAR(CURRENT_DATE)
-			AND loja = 'SITE'";
+		// PESQUISA ADIMPLÊNCIA, ROI E LUCRO ESTIMADO
+		$conteudo_pesquisa = "SELECT 
+          FORMAT(SUM(credito) / SUM(debito) * 100,
+              2) AS adimplencia,
+          FORMAT(((SUM(credito) - ((SUM(debito) / 1.68) * 1.065)) / SUM(debito)) * 100,
+              2) AS roiBruto,
+          FORMAT((((SUM(credito) - ((SUM(debito) / 1.68) * 1.065))) / TIMESTAMPDIFF(MONTH,
+                  '2021-04-01',
+                  CURRENT_DATE)),
+              2) AS lucroEstimadoMes
+      FROM
+          lancamentos
+      WHERE
+          dataDeb < CURRENT_DATE";
 
 		$sql = $conteudo_pesquisa;
 		$search = mysqli_query($conn,$sql);
 
 		while($exibirResultados = mysqli_fetch_array($search)) {
-		$vendasMesSite = $exibirResultados[0];}
+		$adimplencia = $exibirResultados[0];
+		$roiBruto = $exibirResultados[1];
+		$lucroBrutoMes = $exibirResultados[2];}
 
 	 // PESQUISA PEDIDOS PENDENTES
 	 $conteudo_pesquisa = "SELECT SUM(pedido)
@@ -168,17 +179,20 @@ while($exibirResultados = mysqli_fetch_array($search)) {
 								    $porcentagemSite = intval(($vendasMesSite/$vendasMes)*100);
 								    $porcentagemMatriz = intval(($vendasMesMatriz/$vendasMes)*100);
 								    $porcentagemFervedouro = intval(($vendasMesFervedouro/$vendasMes)*100);
-										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Recebíveis do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
+                    print "<tr><td><b class='negrito'>Adimplência</b></td><td>" . $adimplencia . " %</td></tr>";
+                    print "<tr><td><b class='negrito'>ROI Bruto</b></td><td>" . $roiBruto . " %</td></tr>";
+                    print "<tr><td><b class='negrito'>Média Lucro Bruto Mês</b></td><td>R$ " . $lucroBrutoMes . " %</td></tr>";
+										print "<tr><td><b class='negrito'><a href='recebiveis_dia.php'>Créditos do Dia</a></b></td><td>R$ " . number_format($aReceberEsteDia, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteDia > 0) {
-										print "<tr><td><b class='negrito'>Recebidos no Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
+										print "<tr><td><b class='negrito'>Creditados do Dia</b></td><td>R$ " . number_format($recebidosEsteDia, 2, ',', '.') . "</td></tr>";
 										} else {
-											print "<tr><td><b class='negrito'>Recebidos no Dia</b></td><td>R$ 0,00</td></tr>";
+											print "<tr><td><b class='negrito'>Creditados do Dia</b></td><td>R$ 0,00</td></tr>";
 										}
-										print "<tr><td><b class='negrito'>Recebíveis do Mês</b></td><td>R$ " . number_format($aReceberEsteMes, 2, ',', '.') . "</td></tr>";
+										print "<tr><td><b class='negrito'>Créditos do Mês</b></td><td>R$ " . number_format($aReceberEsteMes, 2, ',', '.') . "</td></tr>";
 										if ($recebidosEsteMes > 0) {
-										print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ " . number_format($recebidosEsteMes, 2, ',', '.') . "</td></tr>";
+										print "<tr><td><b class='negrito'>Creditados do Mês</b></td><td>R$ " . number_format($recebidosEsteMes, 2, ',', '.') . "</td></tr>";
 										} else {
-											print "<tr><td><b class='negrito'>Recebidos no Mês</b></td><td>R$ 0,00</td></tr>";
+											print "<tr><td><b class='negrito'>Creditados do Mês</b></td><td>R$ 0,00</td></tr>";
 										}
                     if ($vendasMes > 0) {
                       print "<tr><td><b class='negrito'>Vendas do Mês</b></td><td>R$ " . number_format($vendasMes, 2, ',', '.') . "</td></tr>";
@@ -195,11 +209,6 @@ while($exibirResultados = mysqli_fetch_array($search)) {
                     } else {
                       print "<tr><td><b class='negrito'>Vendas de Fervedouro</b></td><td>R$ 0,00 (0%)</td></tr>";
                     }
-										if ($vendasMesSite > 0) {
-										  print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ " . number_format($vendasMesSite, 2, ',', '.') . " (" . $porcentagemSite . "%)</td></tr>";
-										} else {
-											print "<tr><td><b class='negrito'>Vendas do Site</b></td><td>R$ 0,00 (0%)</td></tr>";
-										}
 								?>
 
 					</div>
